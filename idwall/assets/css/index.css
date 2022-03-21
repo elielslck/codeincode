@@ -1,21 +1,199 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-body {
-  font-family: 'Inter', monospace;
-  padding: 30px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  margin: 0 0 30px 0;
-  font-size: 48px;
-  font-weight: 650;
-  
-  &:hover {
-    font-weight: 900 !important;
-    transition: 600ms;
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Inter', monospace;
+  /* padding: 30px; */
+  background-color: #7900FD;
+  min-height: 100vh;
+}
+
+.header-top {
+  height: 90px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+}
+
+/* ------------------------------------- */
+.header-top-logo img {
+  width: 100px;
+  /* margin: 12px 40px; */
+}
+
+.header-top-menu {
+  display: flex;
+}
+
+/* ---------------------------------------- */
+.header-top-sair {
+  display: flex;
+  align-items: center;
+  /* margin: 0 20px; */
+}
+
+.header-top-sair a {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #5500FF;
+  display: flex;
+}
+
+.header-top-sair img {
+  width: 25px;
+  margin-left: 12px;
+}
+
+/* ------------------------------------------- */
+/* Menu hamburguer */
+
+.mobile-menu {
+  cursor: pointer;
+  display: none;
+  margin-right: 8px;
+}
+
+.mobile-menu div {
+  width: 24px;
+  height: 2px;
+  background: #5500FF;
+  margin: 6px auto;
+  transition: 0.3s;
+
+}
+
+/* ====================================================================================================================================== */
+.container {
+  display: flex;
+}
+
+main {
+  height: 600px;
+  background-color: white;
+  width: 90%;
+  margin: 0 30px;
+  border-radius: 0 0 18px 18px;
+
+}
+
+.nav-aside {
+  margin: 28px;
+}
+
+.nav-aside a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  padding: 8px 28px;
+  text-align: left;
+  transition: border 0.3s ease 0s;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  letter-spacing: .08rem;
+}
+
+.nav-aside a:hover {
+  border: 2px solid white;
+}
+
+.nav-aside li {
+  width: 170px;
+  list-style: none;
+  display: flex;
+  margin: 4px;
+  flex-direction: column;
+}
+
+.nav-aside ul {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header-top {
+    height: 64px;
+    padding: 12px;
+  }
+
+  .header-top-sair span {
+    display: none;
+  }
+
+  .header-top-logo img {
+    width: 64px;
+  }
+
+  .nav-list {
+    position: absolute;
+    right: 0;
+    background: #7900FD;
+    top: 64px;
+    margin: 0;
+    padding: 10px;
+    width: 40vw;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px solid #5500ff4f;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-aside li {
+    width: 150px;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+  }
+
+  .nav-list a {
+    color: #fff;
+  }
+
+  .mobile-menu {
+    display: block;
   }
 }
 
-input {
-  width: 100%;
+.nav-list.active {
+  transform: translateX(0);
 }
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-4px, 8px);
+
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-4px, -8px);
+
+}
+
+/* ======================================================================================================================================== */
