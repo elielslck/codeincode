@@ -1,270 +1,300 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Id-Wall</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+  <title>Id-Wall</title>
 
-    <link rel="stylesheet" href="./assets/css/theme.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
-  </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-  <body>
-    <header class="header-top">
-      <span class="header-top-logo">
-        <img src="./assets/brand/logo.svg" alt="logo-id-Wall" />
-      </span>
+  <link rel="stylesheet" href="./assets/css/theme.css" />
+  <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
 
-      <div class="header-top-menu">
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <span class="header-top-sair">
-          <a href="#">
-            <span>Sair</span>
-            <img src="./assets/brand/sair.svg" alt="Sair" />
-          </a>
-        </span>
+<body>
+  <header class="header-top">
+    <span class="header-top-logo">
+      <img src="./assets/brand/logo.svg" alt="logo-id-Wall" />
+    </span>
+
+    <div class="header-top-menu">
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
-    </header>
+      <span class="header-top-sair">
+        <a href="#">
+          <span>Sair</span>
+          <img src="./assets/brand/sair.svg" alt="Sair" />
+        </a>
+      </span>
+    </div>
+  </header>
+  <div>
     <div>
-      <div>
-        <aside class="nav-aside">
-          <ul class="nav-list">
-            <li><a class="nav-aside-selected" href="#">Protocolos</a></li>
-            <li><a class="nav-aside-selected" href="#">Documentos</a></li>
-            <li><a class="nav-aside-selected" href="#">Usuários</a></li>
-            <li><a class="nav-aside-selected" href="#">Fontes</a></li>
-            <li><a class="nav-aside-selected" href="#">Matrizes</a></li>
-            <li><a class="nav-aside-selected" href="#">Regras</a></li>
-            <li><a class="nav-aside-selected" href="#">Atributos</a></li>
-            <li><a class="nav-aside-selected" href="#">Monitor</a></li>
-            <li><a class="nav-aside-selected" href="#">Organizações</a></li>
-          </ul>
-        </aside>
-        <main>
-          
-              <section id="user-list">
-                <table class="table table-hover w-100" id="user-list-table">
-                  <thead>
-                    <tr>
-                      <th scope="col" class="table__col__id">ID</th>
-                      <th scope="col" class="table__col__client">Cliente</th>
-                      <th scope="col" class="table__col__protocol">Protocolos</th>
-                      <th scope="col" class="table__col__email">Email</th>
-                      <th scope="col" class="table__col__idnetwork">IDNetwork</th>
-                      <th scope="col" class="table__col__access">Acesso</th>
-                      <th scope="col" class="table__col__backoffice">
-                        Backoffice
-                      </th>
-                      <th scope="col" class="table__col__action">Ações</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="" data-toggle="modal" data-target="#user-modal">
-                      <td class="table__col__id">12334</td>
-                      <td class="table__col__client">1026</td>
-                      <td class="table__col__protocol">0</td>
-                      <td class="table__col__email">email.com</td>
-                      <td class="table__col__idnetwork">Sim</td>
-                      <td class="table__col__access">Sim</td>
-                      <td class="table__col__backoffice">Sim</td>
-                      <td class="table__col__action">
-                        <button type="button" class="btn__login">Logar</button>
-                      </td>
-                    </tr>
-                    <tr class="" data-toggle="modal" data-target="#user-modal">
-                      <td class="table__col__id">12334</td>
-                      <td class="table__col__client">1026</td>
-                      <td class="table__col__protocol">0</td>
-                      <td class="table__col__email">email.com</td>
-                      <td class="table__col__idnetwork">Sim</td>
-                      <td class="table__col__access">Sim</td>
-                      <td class="table__col__backoffice">Sim</td>
-                      <td class="table__col__action">
-                        <button class="btn__login">Logar</button>
-                      </td>
-                    </tr>
-                    <tr class="" data-toggle="modal" data-target="#user-modal">
-                      <td class="table__col__id">12334</td>
-                      <td class="table__col__client">1026</td>
-                      <td class="table__col__protocol">0</td>
-                      <td class="table__col__email">email.com</td>
-                      <td class="table__col__idnetwork">Sim</td>
-                      <td class="table__col__access">Sim</td>
-                      <td class="table__col__backoffice">Sim</td>
-                      <td class="table__col__action">
-                        <button class="btn__login">Logar</button>
-                      </td>
-                    </tr>
-                    <tr class="" data-toggle="modal" data-target="#user-modal">
-                      <td class="table__col__id">12334</td>
-                      <td class="table__col__client">1026</td>
-                      <td class="table__col__protocol">0</td>
-                      <td class="table__col__email">email.com</td>
-                      <td class="table__col__idnetwork">Sim</td>
-                      <td class="table__col__access">Sim</td>
-                      <td class="table__col__backoffice">Sim</td>
-                      <td class="table__col__action">
-                        <button class="btn__login">Logar</button>
-                      </td>
-                    </tr>
-                    <tr class="" data-toggle="modal" data-target="#user-modal">
-                      <td class="table__col__id">12334</td>
-                      <td class="table__col__client">1026</td>
-                      <td class="table__col__protocol">0</td>
-                      <td class="table__col__email">email.com</td>
-                      <td class="table__col__idnetwork">Sim</td>
-                      <td class="table__col__access">Sim</td>
-                      <td class="table__col__backoffice">Sim</td>
-                      <td class="table__col__action">
-                        <button class="btn__login">Logar</button>
-                      </td>
-                    </tr>
-                    <tr class="" data-toggle="modal" data-target="#user-modal">
-                      <td class="table__col__id">12334</td>
-                      <td class="table__col__client">1026</td>
-                      <td class="table__col__protocol">0</td>
-                      <td class="table__col__email">email.com</td>
-                      <td class="table__col__idnetwork">Sim</td>
-                      <td class="table__col__access">Sim</td>
-                      <td class="table__col__backoffice">Sim</td>
-                      <td class="table__col__action">
-                        <button class="btn__login">Logar</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
+      <aside class="nav-aside">
+        <ul class="nav-list">
+          <li><a class="nav-aside-selected" href="#">Protocolos</a></li>
+          <li><a class="nav-aside-selected" href="#">Documentos</a></li>
+          <li><a class="nav-aside-selected" href="#">Usuários</a></li>
+          <li><a class="nav-aside-selected" href="#">Fontes</a></li>
+          <li><a class="nav-aside-selected" href="#">Matrizes</a></li>
+          <li><a class="nav-aside-selected" href="#">Regras</a></li>
+          <li><a class="nav-aside-selected" href="#">Atributos</a></li>
+          <li><a class="nav-aside-selected" href="#">Monitor</a></li>
+          <li><a class="nav-aside-selected" href="#">Organizações</a></li>
+        </ul>
+      </aside>
+      <main>
+        <section class="d-flex justify-content-between px-4">
+          <div class="d-flex align-items-center flex-wrap">
+            <h1 class="usuario-titulo">Usuários</h1>
+            <form class="table-control">
+              <input type="textBusca" placeholder="Buscar">
+              <button class="btn-buscar" type="button"><img src="/idwall/assets/brand/search_icon.svg"
+                  alt="buscar"></button>
+            </form>
+            <div class="dropdown">
+              <button class="btn dropdown-toggle btn-filter" type="button" id="dropdown-filter" data-toggle="dropdown"
+                aria-expanded="false" aria-haspopup="true">
+                Filtro
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdown-filter">
+                <h3 class="filter-title">Filtro por:</h3>
+                <ul class="filter-list">
+                  <li class="dropdown-item">
+                    <div class="form-check form-switch filter-item">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">
+                        Usuário Desativados</label>
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="form-check form-switch filter-item">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">
+                        Acesso</label>
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="form-check form-switch filter-item">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">
+                        Backoffice</label>
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="form-check form-switch filter-item">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">
+                        IDNetwork</label>
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-  
-          <!-- Modal -->
-          <div
-            class="modal fade"
-            id="user-modal"
-            tabindex="-1"
-            aria-labelledby="user-modal-label"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="user-modal-label">
-                    Cliente - <span id="user-name">1026</span>
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-dismiss="modal"
-                    aria-label="Fechar"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <div class="d-flex w-100 justify-content-between user__info">
-                    <div class="d-flex flex-column">
-                      <h4>Email</h4>
-                      <span id="user-email">@email.com</span>
-                    </div>
-                    <div class="d-flex flex-column align-items-end">
-                      <h4>ID</h4>
-                      <span id="user-id">12334</span>
-                    </div>
-                  </div>
-                  <div class="d-flex w-100 justify-content-between user__data">
-                    <div
-                      class="d-flex flex-column justify-content-center align-items-center user__protocol"
-                    >
-                      <h4>Protocolos</h4>
-                      <span id="user-protocol">32</span>
-                    </div>
-                    <div class="d-flex user__status w-100 justify-content-evenly">
-                      <div
-                        class="d-flex flex-column justify-content-center align-items-center user__status__item"
-                      >
-                        <h4>IDNetwork</h4>
-                        <span id="user-id-network">
-                          <span class="user__data__status user__data__status-yes"
-                            >SIM</span
-                          >
-                        </span>
-                      </div>
-                      <div
-                        class="d-flex flex-column justify-content-center align-items-center user__status__item"
-                      >
-                        <h4>Acesso</h4>
-                        <span id="user-access">
-                          <span class="user__data__status user__data__status-not"
-                            >NÃO</span
-                          >
-                        </span>
-                      </div>
-                      <div
-                        class="d-flex flex-column justify-content-center align-items-center user__status__item"
-                      >
-                        <h4>Backoffice</h4>
-                        <span id="user-backoffice">
-                          <span class="user__data__status user__data__status-yes"
-                            >SIM</span
-                          >
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn__login__modal">
-                    Logar
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn__close__modal"
-                    data-dismiss="modal"
-                  >
-                    Fechar
-                  </button>
-                </div>
+          <div>
+            <button class="btn-adicionar" type="button">Adicionar</button>
+          </div>
+        </section>
+        <section id="user-list">
+          <table class="table table-hover w-100" id="user-list-table">
+            <thead>
+              <tr>
+                <th scope="col" class="table__col__id">ID</th>
+                <th scope="col" class="table__col__client">Cliente</th>
+                <th scope="col" class="table__col__protocol">Protocolos</th>
+                <th scope="col" class="table__col__email">Email</th>
+                <th scope="col" class="table__col__idnetwork">IDNetwork</th>
+                <th scope="col" class="table__col__access">Acesso</th>
+                <th scope="col" class="table__col__backoffice">
+                  Backoffice
+                </th>
+                <th scope="col" class="table__col__action">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-toggle="modal" data-target="#user-modal">
+                <td class="table__col__id">12334</td>
+                <td class="table__col__client">1026</td>
+                <td class="table__col__protocol">0</td>
+                <td class="table__col__email">email.com</td>
+                <td class="table__col__idnetwork">Sim</td>
+                <td class="table__col__access">Sim</td>
+                <td class="table__col__backoffice">Sim</td>
+                <td class="table__col__action">
+                  <button type="button" class="btn__login">Logar</button>
+                </td>
+              </tr>
+              <tr data-toggle="modal" data-target="#user-modal">
+                <td class="table__col__id">12334</td>
+                <td class="table__col__client">1026</td>
+                <td class="table__col__protocol">0</td>
+                <td class="table__col__email">email.com</td>
+                <td class="table__col__idnetwork">Sim</td>
+                <td class="table__col__access">Sim</td>
+                <td class="table__col__backoffice">Sim</td>
+                <td class="table__col__action">
+                  <button class="btn__login">Logar</button>
+                </td>
+              </tr>
+              <tr data-toggle="modal" data-target="#user-modal">
+                <td class="table__col__id">12334</td>
+                <td class="table__col__client">1026</td>
+                <td class="table__col__protocol">0</td>
+                <td class="table__col__email">email.com</td>
+                <td class="table__col__idnetwork">Sim</td>
+                <td class="table__col__access">Sim</td>
+                <td class="table__col__backoffice">Sim</td>
+                <td class="table__col__action">
+                  <button class="btn__login">Logar</button>
+                </td>
+              </tr>
+              <tr data-toggle="modal" data-target="#user-modal">
+                <td class="table__col__id">12334</td>
+                <td class="table__col__client">1026</td>
+                <td class="table__col__protocol">0</td>
+                <td class="table__col__email">email.com</td>
+                <td class="table__col__idnetwork">Sim</td>
+                <td class="table__col__access">Sim</td>
+                <td class="table__col__backoffice">Sim</td>
+                <td class="table__col__action">
+                  <button class="btn__login">Logar</button>
+                </td>
+              </tr>
+              <tr data-toggle="modal" data-target="#user-modal">
+                <td class="table__col__id">12334</td>
+                <td class="table__col__client">1026</td>
+                <td class="table__col__protocol">0</td>
+                <td class="table__col__email">email.com</td>
+                <td class="table__col__idnetwork">Sim</td>
+                <td class="table__col__access">Sim</td>
+                <td class="table__col__backoffice">Sim</td>
+                <td class="table__col__action">
+                  <button class="btn__login">Logar</button>
+                </td>
+              </tr>
+              <tr data-toggle="modal" data-target="#user-modal">
+                <td class="table__col__id">12334</td>
+                <td class="table__col__client">1026</td>
+                <td class="table__col__protocol">0</td>
+                <td class="table__col__email">email.com</td>
+                <td class="table__col__idnetwork">Sim</td>
+                <td class="table__col__access">Sim</td>
+                <td class="table__col__backoffice">Sim</td>
+                <td class="table__col__action">
+                  <button class="btn__login">Logar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pagination">
+            <span class="pagination-data">
+              1-20 / 1
+            </span>
+            <span class="pagination-icon">
+              <svg viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.64327 0.264138C6.8124 0.433317 6.90741 0.662742 6.90741 0.901961C6.90741 1.14118 6.8124 1.37061 6.64327 1.53978L2.17761 6.00545L6.64327 10.4711C6.8076 10.6413 6.89854 10.8691 6.89648 11.1057C6.89442 11.3422 6.79955 11.5685 6.63228 11.7358C6.46501 11.903 6.23874 11.9979 6.0022 12C5.76566 12.002 5.53777 11.9111 5.36762 11.7468L0.264138 6.64327C0.0950106 6.47409 0 6.24467 0 6.00545C0 5.76623 0.0950106 5.5368 0.264138 5.36762L5.36762 0.264138C5.5368 0.0950107 5.76623 0 6.00545 0C6.24467 0 6.47409 0.0950107 6.64327 0.264138Z"
+                  fill="#595959" />
+              </svg>
+            </span>
+            <span class="pagination-icon">
+              <svg  viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.264139 0.264138C0.0950108 0.433317 0 0.662742 0 0.901961C0 1.14118 0.0950108 1.37061 0.264139 1.53978L4.7298 6.00545L0.264139 10.4711C0.099804 10.6413 0.00887153 10.8691 0.010927 11.1057C0.0129825 11.3422 0.107861 11.5685 0.275128 11.7358C0.442395 11.903 0.668666 11.9979 0.905208 12C1.14175 12.002 1.36964 11.9111 1.53978 11.7468L6.64327 6.64327C6.8124 6.47409 6.90741 6.24467 6.90741 6.00545C6.90741 5.76623 6.8124 5.5368 6.64327 5.36762L1.53978 0.264138C1.37061 0.0950107 1.14118 0 0.901961 0C0.662742 0 0.433317 0.0950107 0.264139 0.264138Z"
+                  fill="#595959" />
+              </svg>
+
+            </span>
+          </div>
+        </section>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="user-modal" tabindex="-1" aria-labelledby="user-modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="user-modal-label">
+            Cliente - <span id="user-name">1026</span>
+          </h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex w-100 justify-content-between user__info">
+            <div class="d-flex flex-column">
+              <h4>Email</h4>
+              <span id="user-email">@email.com</span>
+            </div>
+            <div class="d-flex flex-column align-items-end">
+              <h4>ID</h4>
+              <span id="user-id">12334</span>
+            </div>
+          </div>
+          <div class="d-flex w-100 justify-content-between user__data">
+            <div class="d-flex flex-column justify-content-center align-items-center user__protocol">
+              <h4>Protocolos</h4>
+              <span id="user-protocol">32</span>
+            </div>
+            <div class="d-flex user__status w-100 justify-content-evenly">
+              <div class="d-flex flex-column justify-content-center align-items-center user__status__item">
+                <h4>IDNetwork</h4>
+                <span id="user-id-network">
+                  <span class="user__data__status user__data__status-yes">SIM</span>
+                </span>
               </div>
-         
-        </main>
-
-
+              <div class="d-flex flex-column justify-content-center align-items-center user__status__item">
+                <h4>Acesso</h4>
+                <span id="user-access">
+                  <span class="user__data__status user__data__status-not">NÃO</span>
+                </span>
+              </div>
+              <div class="d-flex flex-column justify-content-center align-items-center user__status__item">
+                <h4>Backoffice</h4>
+                <span id="user-backoffice">
+                  <span class="user__data__status user__data__status-yes">SIM</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn__login__modal">
+            Logar
+          </button>
+          <button type="button" class="btn btn__close__modal" data-dismiss="modal">
+            Fechar
+          </button>
+        </div>
       </div>
+
+      </main>
+
 
     </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/js/menu-nav.js"></script>
-  </body>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/menu-nav.js"></script>
+</body>
+
 </html>

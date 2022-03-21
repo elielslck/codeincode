@@ -1,0 +1,41 @@
+.usuario {
+   display: flex;
+   justify-content: space-between;
+}
+
+.usuario-titulo {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0px 1rem
+}
+.dropdown-menu {
+    background-color: rgb(238, 238, 238)
+}
+
+.form-check-input {
+    display: flex;
+    align-items: center;
+}
+
+.btn-buscar {
+    background: #5500ff;
+}
+
+.dropdown{
+    display: flex !important;
+}
+
+.filter-list {
+    list-style: none;
+    padding-left: 0px !important;
+}
+
+.filter-title {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0px 1rem
+}
+
+.btn-adicionar {
+    background: #5500ff;
+}
