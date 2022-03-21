@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #5500ff;
+  --secondary-color: #7900fd;
+
+  --success: #52c41a;
+  --danger: #f5222d;
+  --alert: #faad14;
+
+  --white: #fff;
+  --bg-1: #efefef;
+
+  --gray-500: #8c8c8c;
+  --gray-700: #595959;
+  --gray-800: #262626;
+}

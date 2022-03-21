@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 * {
   margin: 0;
@@ -11,10 +17,22 @@ a {
 }
 
 body {
-  font-family: 'Inter', monospace;
+  font-family: "Inter", monospace;
   /* padding: 30px; */
-  background-color: #7900FD;
+  background-color: var(--secondary-color);
   min-height: 100vh;
+}
+
+main {
+  height: 100%;
+  /* min-height: 100vh; */
+  background-color: var(--white);
+  border-radius: 0px 0px 18px 18px;
+  container-name: main;
+  container-type: inline-size;
+
+  margin-left: 220px;
+  margin-right: 24px;
 }
 
 .header-top {
@@ -47,7 +65,7 @@ body {
   font-family: Inter, sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #5500FF;
+  color: #5500ff;
   display: flex;
 }
 
@@ -68,10 +86,9 @@ body {
 .mobile-menu div {
   width: 24px;
   height: 2px;
-  background: #5500FF;
+  background: #5500ff;
   margin: 6px auto;
   transition: 0.3s;
-
 }
 
 /* ====================================================================================================================================== */
@@ -79,17 +96,11 @@ body {
   display: flex;
 }
 
-main {
-  height: 600px;
-  background-color: white;
-  width: 90%;
-  margin: 0 30px;
-  border-radius: 0 0 18px 18px;
-
-}
-
 .nav-aside {
-  margin: 28px;
+  position: fixed;
+  left: 0;
+  top: 90px;
+  padding-top: 16px;
 }
 
 .nav-aside a {
@@ -103,7 +114,7 @@ main {
   transition: border 0.3s ease 0s;
   border-radius: 10px;
   border: 2px solid transparent;
-  letter-spacing: .08rem;
+  letter-spacing: 0.08rem;
 }
 
 .nav-aside a:hover {
@@ -123,11 +134,13 @@ main {
   flex-direction: column;
 }
 
-
-
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+
+  main {
+    margin-left: 32px;
   }
 
   .header-top {
@@ -143,22 +156,29 @@ main {
     width: 64px;
   }
 
+  .nav-aside {
+    position: initial;
+  }
+
   .nav-list {
     position: absolute;
     right: 0;
-    background: #7900FD;
+    background: #7900fd;
     top: 64px;
     margin: 0;
     padding: 10px;
     width: 40vw;
+    height: calc(100vh - 64px);
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: column;
     border: 1px solid #5500ff4f;
     border-top: none;
     border-bottom-left-radius: 10px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
+    z-index: 100;
+    box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.4);
   }
 
   .nav-aside li {
@@ -184,7 +204,6 @@ main {
 
 .mobile-menu.active .line1 {
   transform: rotate(-45deg) translate(-4px, 8px);
-
 }
 
 .mobile-menu.active .line2 {
@@ -193,7 +212,214 @@ main {
 
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-4px, -8px);
-
 }
 
 /* ======================================================================================================================================== */
+
+#user-list {
+  padding: 0.5rem 2rem 1rem;
+}
+
+#user-list-table tr th {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  padding-block: 0.875rem;
+}
+
+#user-list-table tr {
+  cursor: pointer;
+}
+
+#user-list-table tr td {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--gray-700);
+}
+
+.btn__login {
+  background-color: var(--primary-color);
+  padding: 6px 14px;
+  font-size: 0.7rem;
+  color: var(--white);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+}
+
+@keyframes hideColumn {
+  0% {
+    visibility: visible;
+    display: flex;
+
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@keyframes appearColumn {
+  0% {
+    visibility: hidden;
+    display: none;
+  }
+  49% {
+    visibility: visible;
+    display: flex;
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1 !important;
+  }
+}
+
+.table__col__protocol,
+.table__col__email,
+.table__col__idnetwork,
+.table__col__access,
+.table__col__backoffice {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+
+.user__info {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 12px;
+}
+
+.user__info h4 {
+  font-size: 1rem;
+  color: var(--gray-500);
+}
+
+.user__info span {
+  font-size: 1rem;
+  color: var(--gray-800);
+  font-weight: 600;
+}
+
+.user__protocol {
+  margin-top: 1rem;
+  padding-inline: 1.5rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.user__protocol h4,
+.user__status h4 {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  font-weight: 600;
+}
+
+.user__protocol span {
+  font-size: 2rem;
+  color: var(--gray-800);
+  font-weight: 600;
+}
+
+.user__status__item {
+  width: 80px;
+}
+
+.user__data__status {
+  font-size: 0.875rem;
+  padding: 4px 16px;
+  background-color: rgba(85, 0, 255, 0.15);
+  color: var(--primary-color);
+  font-weight: 700;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  display: block;
+  margin-top: 2px;
+}
+
+.user__data__status-yes {
+  background-color: rgba(83, 196, 26, 0.15);
+  border: 2px solid var(--success);
+  color: var(--success);
+}
+
+.user__data__status-not {
+  background-color: rgba(245, 34, 45, 0.15);
+  border: 2px solid var(--danger);
+  color: var(--danger);
+}
+
+.btn__login__modal {
+  background-color: var(--white);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  font-weight: 500;
+}
+.btn__login__modal:hover {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: var(--white);
+}
+
+.btn__close__modal {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn__close__modal:hover {
+  background-color: var(--white);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 440px) {
+  .table__col__protocol {
+    display: table-cell;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .table__col__email {
+    display: table-cell;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 815px) {
+  .table__col__idnetwork {
+    display: table-cell;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 890px) {
+  .table__col__access {
+    display: table-cell;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .table__col__backoffice {
+    display: table-cell;
+    opacity: 1;
+    visibility: visible;
+  }
+}
