@@ -13,9 +13,9 @@ triggerTabList.forEach(function (triggerEl) {
 var triggerEl = document.querySelector(
   '#nav-tab button[data-bs-target="#profile"]'
 );
-bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
+bootstrap.Tab.getInstance(triggerEl).show();
 
 var triggerFirstTabEl = document.querySelector(
   "#nav-tab li:first-child button"
 );
-bootstrap.Tab.getInstance(triggerFirstTabEl).show(); // Select first tab
+bootstrap.Tab.getInstance(triggerFirstTabEl).show();
