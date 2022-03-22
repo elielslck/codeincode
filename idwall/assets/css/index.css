@@ -110,6 +110,11 @@ main {
   padding-top: 16px;
 }
 
+.nav-aside-selected {
+  background-color: #fff;
+  color: #7900fd !important;
+}
+
 .nav-aside a {
   color: white;
   text-decoration: none;
@@ -139,6 +144,9 @@ main {
 .nav-aside ul {
   display: flex;
   flex-direction: column;
+}
+
+.nav-aside-selected a {
 }
 
 @media screen and (max-width: 768px) {
@@ -263,10 +271,12 @@ main {
     transform: translateX(0px);
     opacity: 1;
   }
+
   50% {
     transform: translateX(-20px);
     opacity: 0;
   }
+
   100% {
     visibility: hidden;
     display: none;
@@ -278,14 +288,17 @@ main {
     visibility: hidden;
     display: none;
   }
+
   49% {
     visibility: visible;
     display: flex;
     opacity: 0;
   }
+
   50% {
     transform: translateX(-20px);
   }
+
   100% {
     transform: translateX(0px);
     opacity: 1 !important;
@@ -372,6 +385,7 @@ main {
   border-radius: 8px;
   font-weight: 500;
 }
+
 .btn__login__modal:hover {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
