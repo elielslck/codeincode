@@ -25,7 +25,7 @@ body {
 
 main {
   height: 100%;
-  /* min-height: 100vh; */
+  max-width: 1600px;
   background-color: var(--white);
   border-radius: 0px 0px 18px 18px;
   container-name: main;
@@ -155,7 +155,8 @@ main {
   }
 
   main {
-    margin-left: 32px;
+    margin-left: 24px;
+    padding-top: 68px;
   }
 
   .header-top {
@@ -485,30 +486,67 @@ main {
 .stats-section-card-list {
   padding-left: 0px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   column-gap: 2rem;
 }
 
 .stats-section-card-list-item {
   list-style: none;
   position: relative;
-}
-.stats-section-card-list-item
-  + .stats-section-card-list-item
-  .stats-section-card {
-  padding: 0 2rem;
+  padding: 1rem 0rem;
 }
 
-.stats-section-card-list-item + .stats-section-card-list-item::before {
+.stats-section-card-list-item:not(:last-child):before {
   content: "";
-  width: 2px;
-  height: 90%;
+  width: 90%;
+  height: 2px;
   margin-top: 5%;
   background-color: #b6b6b6;
   position: absolute;
+  bottom: 0;
+}
+
+@media screen and (min-width: 460px) {
+  .stats-section-card-list-item:nth-child(even) .stats-section-card {
+    padding: 0 1rem;
+  }
+
+  .stats-section-card-list-item:not(:last-child):before {
+    display: none;
+  }
+
+  .stats-section-card-list-item:nth-child(even):before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 90%;
+    margin-top: 5%;
+    background-color: #b6b6b6;
+    position: absolute;
+  }
+  .stats-section-card-list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
 }
 
 @media screen and (min-width: 1048px) {
+  .stats-section-card-list-item + .stats-section-card-list-item::before {
+    content: "";
+    width: 2px;
+    height: 90%;
+    margin-top: 5%;
+    background-color: #b6b6b6;
+    position: absolute;
+    display: block;
+  }
+
+  .stats-section-card-list-item
+    + .stats-section-card-list-item
+    .stats-section-card {
+    padding: 0 2rem;
+  }
+
   .stats-section-card-list {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 2rem;
@@ -598,7 +636,6 @@ main {
   color: var(--white);
   padding: 4px 12px !important;
   border-radius: 8px;
-  margin-left: 12px;
 }
 
 .btn-adicionar {
@@ -678,4 +715,21 @@ main {
 .pagination-icon svg {
   height: 14px;
   width: 14px;
+}
+
+.user-page-title {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .user-page-title {
+    width: auto;
+    margin-bottom: 0rem;
+  }
+
+  .btn-filter,
+  .btn-adicionar {
+    margin-left: 12px;
+  }
 }
